@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Meu Site Acessível</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Menu de controle para navegação e acessibilidade -->
+    
+
+    <section class="top-control">
+        <nav class="nav-shortcuts">
+            <button onclick="goTo('conteudo-principal')" aria-label="Ir para o conteúdo principal">Ir para o conteúdo [1]</button>
+            <button onclick="goTo('menu')" aria-label="Ir para o menu principal">Ir para o menu [2]</button>
+            <button onclick="goTo('search-box')" aria-label="Ir para a busca">Ir para a busca [3]</button>
+            <button onclick="goTo('rodape')" aria-label="Ir para o rodapé">Ir para o rodapé [4]</button>
+        </nav>
+        <menu class="accessibility-tools">
+            <button onclick="toggleContrast()" aria-label="Ativar/desativar alto contraste">Alto Contraste</button>
+            <button onclick="changeFontSize(1)" aria-label="Aumentar fonte">A+</button>
+            <button onclick="changeFontSize(-1)" aria-label="Diminuir fonte">A-</button>
+            <button onclick="resetFontSize()" aria-label="Redefinir tamanho da fonte">A0</button>
+        </menu>
+    </section>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Charlie Brown Jr. - Tributo</h1>
+        <!-- Campo de busca -->
+        <form class="search-form" role="search" aria-label="Formulário de busca">
+            <label for="search-box" class="sr-only">Buscar:</label>
+            <input id="search-box" type="text" placeholder="Buscar..." aria-label="Campo de busca">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav id="menu" aria-label="Menu principal">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+   
+    <!-- Conteúdo principal -->
+<section class="container">
+    <main id="conteudo-principal">
+
+       
+    <section class="quadro">    
+        <h2>A Estrada da Liberdade</h2>  
+        <figure class="figu-flutuante">
+        <img  class="img-bloco" src="imagens/chorao.jpg" alt="Imagem ilustrativa da seção 1">
+        <p>Charlie Brown Jr. mostrou que cada um tem seu caminho. A banda quebrou barreiras com atitude e autenticidade, inspirando gerações.</p>
+        </figure>
+    </section>
+   
+
+    <section class="quadro">
+         <h2>O Som que Uniu Gerações</h2>
+         <figure class="figu-flutuante">
+        <img class="img-bloco" src="imagens/chorao-neymar.jpg" alt="imagem ilustrativa da seção 2">
+         <p>Do skate às arquibancadas, o CBJR misturou ritmos e criou um som único. Conectou tribos diferentes com rock, rap e reggae.</p>
+         </figure>
+    </section>
+
+    <section class="quadro">
+        <h2>Cada Um É Cada Um</h2>
+        <figure class="figu-flutuante">
+            <img  class="img-bloco" src="imagens/chorao-skate.jpg" ilustrativa da seção 3>
+            <p>A filosofia que virou hino. Chorão ensinou que respeitar as diferenças é fundamental. Seja verdadeiro, sem máscaras.</p>
+        </figure>
+    </section>
+
+    <section class="quadro">
+        <h2>Tamo Junto na História</h2>
+        <figure class="figu-flutuante">
+            <img  class="img-bloco" src="imagens/1900x1900-000000-80-0-0.jpg" alt="imagem ilustrativa da seção 4">
+            <p>Mais que uma banda, um movimento cultural. O legado continua vivo nas ruas, praias e pistas de skate. Inspirando novas gerações.</p>
+        </figure>
+    </section>
+       
+
+            
+            <section class="texto-destaque">
+    <p>
+        Este site foi desenvolvido com foco em <strong>acessibilidade</strong>, incluindo navegação por teclado, alto contraste e ajuste de fontes.
+    </p>
+</section>
+        
+
+        <!-- Barra lateral -->
+        <aside>
+            <h3>Destaques</h3>
+            <ul>
+                <li><a href="#">Notícia 1</a></li>
+                <li><a href="#">Notícia 2</a></li>
+                <li><a href="#">Notícia 3</a></li>
+            </ul>
+        </aside>
+    </main>
+</section>     
+    <!-- Rodapé -->
+    <!-- Rodapé -->
+<footer id="rodape">
+  <p>&copy; 2025 - Meu Site Acessível. Todos os direitos reservados.</p>
+
+  <ul class="social-icons">
+    <li>
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  </ul>
+</footer>
+
+    
+    <!-- VLibras - tradução para Libras -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</body>
+</html>
+
+<!--observações finais 
+Não mudei as divs do vlibras porque:
+
+*/O JavaScript do VLibras pode esperar elementos div
+
+Os atributos personalizados (vw, vw-access-button) podem não funcionar em section
+
+Pode quebrar totalmente a funcionalidade de. 
